@@ -8,7 +8,41 @@
 </head>
 <body>
     <script>
-        console.log("Hello");
+        let playerInput=window.prompt("Make a Choice: ")
+       let computerGuess = Math.floor(Math.random()*3);
+       console.log (computerGuess)
+
+       if (computerGuess==0){
+        console.log("Rock")
+        if(playerInput=="Rock"){
+            console.log(`Tie ${playerInput} vs ${computerGuess}`);
+        }else if(playerInput=="Paper"){
+            console.log(`Won ${playerInput} vs ${computerGuess}`)
+        } else{
+            console.log(`Los ${playerInput} vs ${computerGuess}`);
+        }
+       }else if (computerGuess==1){
+           console.log("Paper")
+           if(playerInput=="Paper"){
+               console.log(`Tie ${playerInput} vs ${computerGuess}`)
+           }else if(playerInput=="Rock"){
+               console.log(`Lost ${playerInput} vs ${computerGuess}`)
+           } else{
+               console.log(`Win ${playerInput} vs ${computerGuess}`)
+           }
+           
+            
+           
+       }else if (computerGuess==2){
+           console.log("scissors")
+           if(playerInput=="scissors"){
+               console.log(`Tie ${playerInput} vs ${computerGuess}`)
+           }else if(playerInput=="Rock"){
+               console.log(`Win ${playerInput} vs ${computerGuess}`)
+           } else{
+               console.log(`Lost ${playerInput} vs ${computerGuess}`)
+           }
+        }
     </script>
 </body>
 </html>
